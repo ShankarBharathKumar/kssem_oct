@@ -16,8 +16,18 @@ emotion_classifier = load_model(expression_model, compile=False)
 # Load the Haar cascade file for face detection
 face_cascade = cv2.CascadeClassifier("models/haarcascade_frontalface_default.xml")
 
-# Initialize the video capture from the camera (0 is usually the default camera)
-cap = cv2.VideoCapture(0)
+# Provide user with options to choose between video or camera
+choice = input("Choose input source (video/camera): ").strip().lower()
+
+if choice == "video":
+    video_path = input("Enter the path to the video file: ").strip()
+    cap = cv2.VideoCapture(video_path)
+elif choice == "camera":
+    # Initialize the video capture from the camera (0 is usually the default camera)
+    cap = cv2.VideoCapture(0)
+else:
+    print("Invalid choice! Please select either 'video' or 'camera'.")
+    exit()
 
 # Initialize counters for each feature
 total_frames = 0
