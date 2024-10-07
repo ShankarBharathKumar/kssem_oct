@@ -1,10 +1,10 @@
 # kssem-oct
 
-**'feature/001-procesing_raw_video_from_folder'** which process video from the folder & returns the response
+**'feature/002-processing_live_feed'** which process using webcam & returns the response
 
 Installation guide:
 
 1. Setup virtual environment & activate the virtual environment
 
 2. Install the requirements.txt `pip install -r requirements.txt`
-3. Run raw_video.py 
+3. Run live_feed.py 
