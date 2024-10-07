@@ -1,4 +1,4 @@
-# kssen-oct
+# kssem-oct
 
 **'feature/001-procesing_raw_video_from_folder'** which process video from the folder & returns the response
 
